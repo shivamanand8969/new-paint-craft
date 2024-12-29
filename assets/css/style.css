@@ -805,7 +805,6 @@ p {
   border-color: #fc8459;
   color: #ffffff;
 }
-
 /*----------------------------------------*/
 /*  02. HEADER CSS START
 /*----------------------------------------*/
@@ -1066,6 +1065,7 @@ p {
   top: 1px;
   padding-left: 3px;
 }
+
 .main-menu ul li:hover > a, .main-menu ul li.active > a {
   color: #fc8459;
 }
