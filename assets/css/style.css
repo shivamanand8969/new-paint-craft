@@ -5097,7 +5097,7 @@ p {
   }
 }
 .hero__title {
-  font-size: 110px;
+  font-size: 76px;
   line-height: 0.9;
   color: #ffffff;
   margin-bottom: 62px;
@@ -5109,17 +5109,17 @@ p {
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero__title {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .hero__title {
-    font-size: 80px;
+    font-size: 50px;
   }
 }
 @media (max-width: 575px) {
   .hero__title {
-    font-size: 70px;
+    font-size: 50px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
