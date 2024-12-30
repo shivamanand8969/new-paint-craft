@@ -1495,9 +1495,36 @@ prevButton.addEventListener('click', () => {
                   <label for="message" class="form-label">Message</label>
                   <textarea class="form-control" id="message" rows="3" placeholder="Enter your message" required></textarea>
                </div>
-               <button type="submit" class="btn btn-primary w-100">Submit</button>
+               <button type="button" class="btn btn-primary w-100" id="sendMessage">Send Message</button>
             </form>
          </div>
+         
+         <script>
+            document.getElementById('sendMessage').addEventListener('click', function () {
+               // Get form data
+               const fullName = document.getElementById('fullName').value;
+               const email = document.getElementById('email').value;
+               const phone = document.getElementById('phone').value;
+               const message = document.getElementById('message').value;
+         
+               // Validate form inputs
+               if (!fullName || !email || !phone || !message) {
+                  alert('Please fill in all the fields!');
+                  return;
+               }
+         
+               // Construct WhatsApp message
+               const whatsappMessage = `Hello, I am ${fullName}.%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+         
+               // WhatsApp API URL
+               const phoneNumber = 919964020792; // Replace with your WhatsApp number (e.g., "1234567890")
+               const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+         
+               // Redirect to WhatsApp
+               window.open(whatsappUrl, '_blank');
+            });
+         </script>
+         
       </div>
    </div>
 </div>
@@ -1585,7 +1612,7 @@ prevButton.addEventListener('click', () => {
                                     </div>
                                     <div class="footer__info-text">
                                        <h4>Email Us</h4>
-                                       <a href="mailto:paincraft@gmail.com">paincraft@gmail.com</a>
+                                       <a href="mailto:paincraft@gmail.com">paintcraft@gmail.com</a>
                                     </div>
                                  </li>
                                  <li class="d-flex align-items-start">
@@ -1662,9 +1689,7 @@ prevButton.addEventListener('click', () => {
          </div>
       </div>
    </footer>
-   <!-- footer area end -->
-
-   <!-- JS here -->
+  
    <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
    <script src="assets/js/vendor/waypoints.min.js"></script>
    <script src="assets/js/bootstrap.bundle.min.js"></script>
